@@ -1,0 +1,1452 @@
+body {
+  margin: 10px;
+  overflow: auto;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: var(--white-color); /*Global variable*/
+
+}
+
+:root {      /*global variables that can be used thoroughout the css*/
+  --black-color: #000000;
+  --white-color: #fff;
+}
+
+.darkmode {   /*color code for dark mode*/
+  --black-color: #fff;
+  --white-color: #000000;
+}
+
+.lightmode {   /*color code for light mode*/
+  --black-color: #000000;
+  --white-color: #fff;
+
+
+}
+
+#icon {  /*Moon icon for dark mode*/
+  background-color: #000000;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#sun {  /*Sun icon for light modde*/
+  background-color: black;
+  position: relative;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+/*-------------HEADER----------*/
+header .header {
+
+  display: flex; /* horizontal row of child elements within the header */
+  justify-content: center; /*horizontally aligning items in center*/
+  height: 80px;
+  background-color: #5D641D; /*background colour of header div*/
+}
+
+.header img {  /*dark/light mode icons*/
+  position: relative;
+  left: 50%;
+  top: 30%;
+}
+
+
+/*-------------NAVIGATION BAR------------*/
+
+
+nav {
+  color: var(--black-color); /*text color*/
+  overflow: hidden; /*hides content that overflows the container*/
+  background-color: var(--white-color);  /*background color of nav div*/
+}
+
+.navigationbar ul {
+
+  list-style: none; /* removes bullet points of the list */
+  display: flex;  /*makes horizontal row*/
+  justify-content: center;  /*centers the content along horizontal axis*/
+  color: var(--black-color);
+}
+
+
+
+.navigationbar li {
+
+  margin: 0 20px;
+  /*no margin on top and bottom, 20px margin on left and right */
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.navigationbar a {
+  text-decoration: none; 
+  color: var(--black-color);
+}
+
+.navigationbar a:hover {
+  background-color: #E5C49C;
+  
+}
+
+/*--------------------HOME PAGE-------------------*/
+
+.backgroundimage {
+
+  background-image: url('/assets/backgroundimage.jpg');
+  background-size: cover; /*image covering the entire background area*/
+  width: 100%;
+  height: 750px;
+  grid-area: backgroundimage;
+
+}
+
+.featuredcontent {
+
+  grid-area: featuredcontent; /*an element of grid container*/
+  margin-top: 70px;
+  margin-left: 20px;
+  text-align: justify;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.featuredimg {
+
+  background-image: url('assets/newfeaturedimg.png'); /*physical child abuse image*/
+  background-size: cover;
+  height: 700px;
+  margin-top: 50px;
+
+}
+
+.featuredcontent:hover {
+
+  background-color: var(--black-color); /*On hovering featured conntent, background colour changes to black*/
+  color: var(--white-color); /*On hovering featured content div, text colour changes to white*/
+  transition: all 0.1s step-end; /*In 0.1s, the properties(background color and text color) of all the elements 
+                                    will transition to new states*/
+  cursor: pointer; /*cursor changes to a pointer when hovered over featured content*/
+
+}
+
+.featuredcontent a {
+
+  font-size: large;/*"Read More" set to large font*/
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.featuredcontent a:hover {
+
+  background-color: gray; /*On hovering Read More, its background color changes to gray*/
+
+}
+
+.quizzes {
+
+  grid-area: quizzes; /*an element of grid container*/
+  margin-top: 70px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.quizzes h1 {
+  text-align: center; /*align Quiz heading in center*/
+}
+
+.quizzes li {
+
+  margin: 70px; /*margin of 70px between the list items and right left*/
+  color: var(--black-color);
+
+}
+
+.quizzes a {
+  color: var(--black-color);
+}
+
+.mentalhealthconditions {
+
+  grid-area: mentalhealthconditions; /*an element of grid container*/
+  background-color: #5D641D; /*setting background color of this div*/
+  height: 400px;
+
+}
+
+.mentalhealthconditions table {  /*table in mental health conditions*/
+
+  width: 100%;
+  padding: 25px;
+
+}
+
+.mentalconditions th {
+
+  font-size: 30px; /*Heading of each column*/
+
+}
+
+.mentalconditions table,
+th,
+td {
+
+  border: 1px solid; /*makes a border of 1px throughout the table*/
+
+}
+
+.mentalhealthconditions td {
+  /*data in each cell*/
+
+  padding: 8px;
+  text-align: justify;
+
+}
+
+.intromentalhealth {
+
+  grid-area: intromentalhealth;/*an element of grid container*/
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.feedback {
+  grid-area: feedback; /*an element of grid container*/
+  background-color: pink;  /*setting background color to pink for this div*/
+
+}
+
+.feedback h3 {
+
+  text-align: justify;
+  padding: 20px; /*padding of 20px on all the sides of the text*/
+}
+
+.feedback p {
+  /*juliet brown(feedback person name) */
+
+  text-align: right;
+  padding: 20px;
+  font-size: larger;
+}
+
+.therapy {
+  /*therapy div on the right side*/
+
+  grid-area: therapy; /*an element of grid container*/
+  background-color: #7C645E; /*setting background color for therapy div*/
+
+}
+
+.therapy p { /*paragraph in therapy div*/
+  text-align: justify;
+}
+
+.therapy h1 { /*heading of therapy div*/
+  text-align: center;
+
+}
+
+.btn {
+  /*Get Appoitnment Button */
+
+  border: 2px solid black;
+  border-radius: 20px; /*making the button round*/
+  background-color: var(--white-color);/* button background color*/
+  color: var(--black-color); /* text color */
+  padding: 14px 28px; /* padding of 14px on top,bottom and 28px on right,left*/
+  font-size: 16px;
+  cursor: pointer; /* cursor changes to pointer*/
+
+}
+
+.subscriptionform {
+
+  grid-area: subscriptionform; /* element of grid */
+  background-color: aliceblue; /* background color of subscription form*/
+
+}
+
+.subscriptionform input[type="email"] {
+  /* field for entering the email */
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+
+.subscriptionform button {
+  /*Subscribe Button*/
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscriptionform button:hover {
+
+  background-color: #000000; /* Subscribe button background color changes to black when hovered */
+
+}
+
+/*-------Grid for Home page-----------*/
+.grid-container {  
+
+  display: grid; /* makes a grid layout */
+  grid-template-columns: 2fr 1fr;     /* makes two columns on the page, one takes 2 fraction 
+                                      and the other column takes 1 fraction of the whole page */
+  grid-template-areas:
+    /* grid items in two columns */
+    'featuredcontent  quizzes'
+    'mentalhealthconditions mentalhealthconditions '
+    'intromentalhealth intromentalhealth '
+    'feedback  therapy'
+    'subscriptionform .'
+    'footer footer';
+  background-color: var(--white-color);
+  gap: 100px;  /* gap of 100px between grid items */
+
+}
+
+/*--------------------------------------------------------------NEWS AND ARTICLES---------------------------------------------------------------------------*/
+
+.newsandarticles {  /*Title of the page*/
+  grid-area: news;
+  text-align: center;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.article { /*container which contains the workplace image and caption*/
+  grid-area: article;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.article .image {  /*workplace article image*/
+  height: 600px;
+  background-image: url('/assets/workplace mental health.jpg');
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.article h1 { /*Title of the article*/
+  padding: 10px;
+}
+
+.article p { /*caption of the article*/
+  padding: 10px;
+  text-align: justify;
+}
+
+.article a {
+  display: block; 
+  text-decoration: none;
+  color: white;
+  background-color: #000000;
+}
+
+.article a:hover {  /*when article container is hovered background color and text color changes*/
+  background-color: var(--black-color);
+  color: var(--white-color);
+
+}
+
+.article:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transform: scale(1.03); /*scales up the size of the element by 2%*/
+  transition: all 1s ease; /*transition property applied to all elements and their property changes after 1s*/
+}
+
+/*container which contains four articles*/
+.articlescontainer {
+
+  grid-area: articles;
+  display: flex; /*flex container*/
+  flex-wrap: wrap; /*articles shift to next row if there is less space*/
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.articleslayout {
+
+  background-color: var(--white-color);
+  color: var(--black-color);
+  width: 300px;
+  margin: 80px;
+
+}
+
+.articleslayout p {
+
+  text-align: justify;
+}
+
+.articleslayout a {
+
+  text-decoration: none;
+  background-color: white;
+  color: black;
+
+}
+
+.articleslayout a:hover 
+{
+
+  color: white; /*text color changes to white when hovered*/
+
+}
+
+.articleimg {
+
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+/*four article images in the articles layout*/
+.img1 {
+  background-image: url('/assets/childabuse.jpg');
+  height: 200px;
+}
+
+.img2 {
+  background-image: url('/assets/stressedstudent.jpg');
+  height: 200px;
+
+}
+
+.img3 {
+  background-image: url('/assets/wellbeingbackground.jpg');
+  height: 200px;
+
+}
+
+.img4 {
+  background-image: url('/assets/relationships.jpg');
+  height: 200px;
+
+}
+
+.articleslayout:hover {
+
+  background-color: var(--black-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+
+}
+
+.articleslayout a {
+
+  display: block;
+  text-decoration: none;
+  color: black;
+
+}
+
+.articleslayout a:hover {
+
+  background-color: gray;
+
+}
+
+.side { /*grid column*/
+  grid-area: side;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.sidenews {
+  text-align: justify;
+
+}
+
+.sidenews:hover {
+  transform: scale(1); 
+  box-shadow: 0 0 15px var(--black-color); /*when hovered over box-shadow is displayed*/
+
+}
+
+.sidenews p {
+  text-align: left;
+}
+
+.sidenews a {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.newsimage {
+
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+
+}
+
+.fimg {   /*news about war children */
+
+  background-image: url('assets/warchildren.jpg');
+
+}
+
+.simg {  /*news about simon cowell*/
+  background-image: url('assets/simoncowell.png');
+
+}
+
+.side2 {
+
+  grid-area: side2;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+
+.implinks {
+  grid-area: implinks;
+  justify-content: center;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.implinks li {
+
+  margin: 30px 30px 0 0;
+}
+
+.implinks a {
+  color: var(--black-color);
+}
+
+.socialmedia {  /*news about social media*/
+  grid-area: socialmedia;
+  text-align: justify;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.socialmedia p {
+  text-align: left;
+}
+
+.socialmedia a {
+  color: var(--black-color);
+  background-color: var(--white-color);
+
+}
+
+.socialmedia:hover {
+  transform: scale(1);
+  box-shadow: 0 0 15px var(--black-color);
+}
+
+.socialmediaimg {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-image: url('assets/socialmedia.jpg');
+}
+
+/*Grid for News and articles*/
+.gridcontainer-3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 'news news news'
+    'side article side2'
+    'socialmedia articles implinks'
+    '. articles .'
+    'footer footer footer';
+  gap: 45px; /*gap between grid items*/
+  margin: 15px;
+}
+
+/*---------------------------------------------AWARENESS--------------------------------------------------------*/
+
+
+.slideshow {
+  background-color: black;
+}
+
+/*slideshow images*/
+.slide-1 {
+  background-image: url('assets/9million.jpg');
+
+}
+
+.slide-2 {
+  background-image: url('assets/slideshow.jpg');
+}
+
+.slide-3 {
+  background-image: url('assets/women.jpg');
+}
+
+.slide-4 {
+  background-image: url('assets/children.jpg');
+}
+
+.slide {  /*container for slideshow*/
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden; /*preventing horizontal scrolling*/
+}
+
+.caption {
+
+  background: rgba(0, 0, 0, 0, 03); /*color code in terms of red,green,blue and alpha for tranparency*/
+  width: 100%;
+  position: absolute;
+  top: 50%; /*50% down from the top*/
+  transform: translateY(-50%);/*centers the caption on each slideshow vertically within the parent container*/
+  padding: 40px 0px;
+}
+
+.caption h5 {  /*text on slideshow written in heading*/
+  background-color: rgba(255, 255, 255, .5); /*transparent background*/
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  padding: 18px;
+}
+
+.arrow {  /*right and left arrow*/
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /*moving the arrows up 50% of their height to vertically center them*/
+  cursor: pointer;
+  z-index: 100; /*higher stacking order so that they appear on the top*/
+  background: rgba(0, 0, 0, .1);
+  border-radius: 50%;
+  transform: background 500ms; /*transform property takes 500 milli seconds*/
+}
+
+.arrow:hover {
+
+  background: rgba(0, 0, 0, .4); /*background color of arrows changed when hovered also adding transparency*/
+
+}
+
+.left {
+
+  left: 0; /*positioning the left arrow on the extreme left*/
+
+}
+
+.right {
+
+  right: 0; /*positioning the right arrow on the extreme right*/
+
+}
+
+.grid-container4 p {
+
+  text-align: justify;
+
+}
+
+.mentalconditions {
+
+  grid-area: conditions;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.mentalconditions dt {
+
+  text-align: center;
+
+}
+
+.signsandsymptoms {
+
+  grid-area: symptoms;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.signsandsymptoms li {
+
+  margin: 25px;  /*spacing the list*/
+
+}
+
+.seekhelp {
+
+  grid-area: seekhelp;
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+}
+
+.seekhelp h3 {
+
+  text-align: left;
+
+}
+
+.seekhelp li {
+
+  margin: 15px;
+
+
+}
+
+.seekhelp a {
+
+  cursor: pointer;
+  color: var(--black-color);
+
+
+}
+
+/* Grids for awareness page */
+.grid-container4 {
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: '. conditions .'
+      '. symptoms .'
+      '. seekhelp .'
+      'footer footer footer';
+  gap: 15px;
+  margin: 15px;
+
+}
+
+/*---------------------------------------------------------------PERSONAL STORIES--------------------------------------------------------------------*/
+
+.personalstories {
+
+  grid-area: personalstories;
+  max-width:100%;  /*to keep the div elements within the viewport*/
+  height: 80%;
+  border: 10px black;
+  background-color: #E5C49C;
+  padding: 50px;
+
+}
+
+.personalstory1 {   /*Sahar's experience*/
+
+  grid-area: personalstory1;
+  background-color: rgb(248, 205, 212);
+
+}
+
+.personalstory1 p {
+
+  text-align: justify;
+  padding: 20px; /*to prevent the text from going to the extreme ends of the container*/
+
+}
+
+.personalstory1 img {
+
+  float: left; /*image on the left and text wraps around it*/
+
+}
+
+.personalstory2 img {  
+
+  float: left;  /*image on the left and text wraps around it*/
+  
+
+}
+
+.personalstory2 p {  /*Anjalis's Story*/
+
+  text-align: justify;
+  padding: 20px;
+  
+
+}
+
+.personalstory2 {
+
+  grid-area: personalstory2;
+  background-color: #debcdc;
+
+}
+
+.personalstory3 {  /*Jamie's Story*/
+
+  grid-area: personalstory3;
+  background-color: #daeaf7;
+
+
+}
+
+.personalstory3 img {
+
+  float: left;
+
+}
+
+.personalstory3 p {
+
+  text-align: justify;
+  padding: 20px;
+
+}
+
+.personalstory4 {
+
+  grid-area: personalstory4;
+  background-color: #FBE5C8;
+
+}
+
+.personalstory4 img {
+
+  float: left;
+
+}
+
+.personalstory4 p {   /*Anonymous story*/
+
+  text-align: justify;
+  padding: 20px;
+
+}
+
+/*Code inpiration from https://www.youtube.com/watch?v=HKp6bywsDQ4 */
+
+.container {  /*container which contains highlight of personal stories*/
+
+  grid-area: card;
+  background-color: lightslategray;
+  display: flex; /*flexbox container*/
+  justify-content: center;
+  flex-wrap: wrap; /*elements taking next row if they cannot fit in a single line*/
+}
+
+.card {
+  background: #daeaf7;
+  width: 300px;
+  margin: 80px;
+  border-radius: 15px;
+
+}
+
+.card-img {  /*image in each card*/
+  height: 250px;
+  background-color: white;
+  background-size: cover;
+  border-radius: 15px;
+
+}
+
+.image1 {
+  background-image: url('/assets/story1.jpg');
+
+}
+
+.image2 {
+  background-image: url('/assets/story2.png');
+
+}
+
+.image3 {
+  background-image: url('/assets/john.png');
+
+}
+
+.card h1 {  /*heading of each card*/
+  padding: 10px;
+}
+
+.card p {  /*text on each card*/
+  padding: 10px;
+  text-align: justify;
+}
+
+.card a {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  margin: 20px 50px;
+  display: block;  /*starting on a new line*/
+}
+
+
+.card:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}
+
+.shareyourstory {
+  grid-area: button;
+}
+
+.btn {  /*Source Code: https://www.w3schools.com/tags/tag_button.asp with modifications made*/
+
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.story {
+  border-color: #04AA6D;
+  color: black;
+  background-color: lightskyblue;
+  border-radius: 25px;
+}
+
+/* Grid for Personal Stories */
+.grid-container2 {
+  clear: both;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: 'personalstories personalstories'
+    'personalstory1 personalstory2'
+    'personalstory3 personalstory4'
+    'card card'
+    'button button'
+    'footer footer';
+  gap: 15px;
+  margin: 15px; 
+}
+
+
+/*---------------------------------------------------------------NEED HELP---------------------------------------------------------------------------*/
+
+
+input[type=text],
+input[type=date],
+input[type=tel],
+select,
+textarea { /* styling input fields of the form*/
+
+  width: 100%;
+  padding: 12px;
+  border: 1px black;
+  border-radius: 6px; /* round fields */
+  box-sizing: border-box; /* border and padding will not change the orginal width of the element*/
+  margin-top: 16px;
+  margin-bottom: 16px;
+  resize: horizontal;/* text area is resizable */
+
+}
+
+
+input[type=submit] {  /*Submit button*/
+
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+
+}
+
+
+input[type=submit]:hover {
+
+  background-color: #45a049; /* background color of submit button changes when hovered*/
+}
+
+.formcontainer {
+  /* Form */
+
+  border-radius: 5px;
+  background-color: #E5C49C;
+  padding: 20px;
+
+}
+
+
+
+/*--------------------------------------------------------------FOOTER-----------------------------------------------------------------------------*/
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  background-color: #5D641D;
+  color: #000000;
+}
+
+.footercontent {
+  padding: 50px;
+  display: flex;  /*aligning items horizontally*/
+  flex-wrap: wrap; /*items moving to next line if the space is less*/
+  justify-content: center;
+}
+
+.footer {
+  text-align: justify;
+
+
+}
+
+.col1,
+.col2,
+.col3,
+.socialmediaicons {
+  flex: 1; /*items grow and shrink equally*/
+  padding: 10px;
+
+}
+
+.footer ul {
+  list-style-type: none; /*removing bullet points*/
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  background-color: white;
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.socialmediaicons ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.socialmediaicons img {
+  max-width: 30px;
+  height: auto;
+}
+
+.copyrights {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.disclaimer {
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+
+/*--------------REPORT---------------*/
+.Report {
+  
+  text-align: justify;
+  margin: 20px;
+}
+
+.Report a {
+  color: #000000;
+  
+}
+
+.Report img {
+  margin: 50px;
+}
+
+.Report h3 {
+  margin: 50px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------------*/
+
+/*-----------------------------------NAV BAR------------------------------------*/
+
+/*----MOBILE-----*/
+
+
+@media only screen and (max-width:570px) {
+  nav {
+
+    color: var(--black-color);
+    background-color: var(--white-color);
+  
+  }
+
+  .navigationbar ul {
+
+    list-style: none; /* removes bullet points of the list */
+    display: block;  
+    justify-content: left; /*centers the content along horizontal axis*/
+    color: var(--black-color);
+    margin: 0px;
+
+  }
+
+  .navigationbar li 
+  {
+
+    margin: 0 0px; /*no margin on top and bottom, 20px margin on left and right */
+    background-color: var(--white-color);
+    color: var(--black-color);
+    margin-top: 5px;
+   
+  }
+
+  .navigationbar a 
+  {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 15px;
+    /* display: block; */
+
+  }
+
+  .navigationbar a:hover {
+
+    background-color: #E5C49C;
+   
+  }
+
+}
+
+
+
+/*-------------TABLET---------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px) {
+
+  nav {
+
+    color: var(--black-color);/*text color*/
+    overflow: hidden; /*hides content that overflows the container*/
+    background-color: var(--white-color); /*background color of nav div*/
+
+  }
+
+  .navigationbar ul {
+
+    font-size: 15px;
+    list-style: none; /* removes bullet points of the list */
+    display: flex; /*makes horizontal row*/
+    justify-content: center; /*centers the content along horizontal axis*/
+    color: var(--black-color);
+  }
+
+  .navigationbar img {
+
+    justify-content: right;
+  }
+
+  .navigationbar li {
+
+    margin: 0 20px; /*no margin on top and bottom, 20px margin on left and right */
+    background-color: var(--white-color);
+    color: var(--black-color);
+  }
+
+  .navigationbar a {
+
+    text-decoration: none;
+    color: var(--black-color);
+  }
+}
+
+
+/*-------------MOBILE--------------*/
+
+/*------------------------------------------HOME PAGE------------------------------------------*/
+
+@media only screen and (max-width:570px) {
+  
+   #icon { /*icons for dark/light mode*/
+    display: block;
+    background-color: #000000;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  #sun {
+    background-color: black;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .backgroundimage {
+
+    background-size: 100%;
+    background-repeat: none;
+    height: 300px;
+  }
+
+  .featuredimg {
+    background-size: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+
+  .mentalhealthconditions {
+    height: 700px;
+  }
+
+  .grid-container {
+
+    display: grid; /* makes a grid layout */
+    grid-template-columns: 2fr 1fr;     /* makes two columns on the page, one takes 2 fraction 
+                                        and the other column takes 1 fraction of the whole page */
+    grid-template-areas:
+      /* grid items in two columns */
+      'featuredcontent  featuredcontent'
+      'quizzes quizzes'
+      'mentalhealthconditions mentalhealthconditions '
+      'intromentalhealth intromentalhealth '
+      'feedback  feedback'
+      'therapy therapy'
+      'subscriptionform subscriptionform'
+      'footer footer';
+    background-color: var(--white-color);
+    gap: 100px; /* gap of 100px between grid items */
+
+  }
+
+
+
+}
+
+/*-----------------------TABLET--------------------------*/
+
+@media only screen and (min-width: 571px) and (max-width: 1010px) {
+
+  .backgroundimage {
+
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .featuredcontent {
+
+    grid-area: featuredcontent;/*an element of grid container*/
+    margin-top: 70px;
+    margin-left: 20px;
+    text-align: justify;
+    background-color: var(--white-color);
+    color: var(--black-color);
+
+  }
+
+  .featuredimg {
+    width: 100%;
+    height: 300px;
+
+  }
+
+  .grid-container {  /*grid columns changed when screen is resized*/
+
+    display: grid;/* makes a grid layout */
+    grid-template-columns: 2fr 1fr;     /* makes two columns on the page, one takes 2 fraction 
+                                        and the other column takes 1 fraction of the whole page */
+    grid-template-areas:
+      /* grid items in two columns */
+      'featuredcontent  featuredcontent'
+      'quizzes quizzes'
+      'mentalhealthconditions mentalhealthconditions '
+      'intromentalhealth intromentalhealth '
+      'feedback  feedback'
+      'therapy therapy'
+      'subscriptionform subscriptionform'
+      'footer footer';
+    background-color: var(--white-color);
+    gap: 100px; /* gap of 100px between grid items */
+
+  }
+
+  .mentalhealthconditions 
+  {
+    height: 500px;
+  }
+
+}
+
+
+/*-------------------------------------------------------NEWS AND ARTICLES MEDIA QUERY-----------------------------------------------------------------*/
+
+/*--------------MOBILE------------------*/
+
+@media only screen and (max-width:570px) {
+
+  .gridcontainer-3 
+  {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'news '
+      'article  '
+      'side'
+      'side2 '
+      'socialmedia '
+      'articles '
+      'implinks '
+      'footer ';
+    gap: 45px;
+    margin: 15px;
+  }
+
+}
+
+/*-------------------------TABLET------------------------*/
+
+@media only screen and (min-width: 571px) and (max-width: 1010px) {
+
+
+  .gridcontainer-3 
+  {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'news '
+      'article  '
+      'side'
+      'side2 '
+      'socialmedia '
+      'articles '
+      'implinks '
+      'footer '
+
+  }
+}
+
+/*-------------------------------------------------PERSONAL STORIES MEDIA QUERY---------------------------------------------------------------------------*/
+
+/*--------------MOBILE-----------------*/
+@media only screen and (max-width:570px) {
+
+  .grid-container2
+   {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'personalstories'
+      'personalstory1 '
+      'personalstory2'
+      'personalstory3'
+      'personalstory4'
+      'card '
+      'button '
+      'footer ' ;
+    gap: 15px;
+    margin: 15px;
+  }
+
+}
+
+/*-------------TABLET----------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px) {
+
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'personalstories'
+      'personalstory1 '
+      'personalstory2'
+      'personalstory3'
+      'personalstory4'
+      'card '
+      'button '
+      'footer ';
+    gap: 15px;
+    margin: 15px;
+  }
+}
+
+/*------------------------------------------------------------------AWARENESS MEDIA QUERY----------------------------------------------------------*/
+
+/*-----------MOBILE-----------------*/
+
+@media only screen and (max-width:570px) {
+
+  .personalstories {
+    grid-area: personalstories;
+    width: 80%;
+    height: 80%;
+    border: 10px black;
+    background-color: #E5C49C;
+    padding: 50px;
+
+  }
+
+  .grid-container4 {
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'conditions'
+      ' symptoms '
+      ' seekhelp '
+      'footer';
+    gap: 15px;
+    justify-content: center;
+
+  }
+
+}
+
+/*--------------------------TABLET----------------------*/
+
+@media only screen and (min-width: 571px) and (max-width: 1010px) {
+
+  .personalstories {
+    grid-area: personalstories;
+    width: 80%;
+    height: 80%;
+    border: 10px black;
+    background-color: #E5C49C;
+    padding: 50px;
+
+  }
+
+  .grid-container4 {
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 'conditions'
+      ' symptoms '
+      ' seekhelp '
+      'footer';
+    gap: 15px;
+    justify-content: center;
+  }
+
+}

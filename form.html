@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peace and Mind</title>
+        
+    </head>
+
+
+    <body>
+
+<!------------------------------------- HEADER ------------------------------->
+
+        <header>
+            <div class = header>
+                <img src = "assets/moon.png" id = "icon" onclick="darkMode()">  <!--Moon Icon for Dark Mode-->
+                <img src = "assets/sun.png" id = "sun" onclick="lightMode()">   <!--Sun Icon for Light Mode-->
+                <h1>Peace and Mind</h1>
+            </div>
+    
+        </header>
+        
+       
+<!--------------------------------- NAVIGATION BAR ------------------------------->
+
+        <nav>
+            
+            <div class = "navigationbar">
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="awareness.html">AWARENESS</a></li>
+                    <li><a href="news&articles.html">NEWS and ARTICLES</a></li>
+                    <li><a href="personalstories.html">PERSONAL STORIES</a></li>
+                    <li><a href="form.html">NEED HELP?</a></li>
+                    <li><a href="report.html">REPORT</a></li>
+                </ul>
+            </div>
+        
+        </nav>
+
+        <div class = "backgroundimage">
+              
+        </div>
+
+
+        <div class = "description">
+            <p>You are not alone <br>
+                We are always here for you no matter what because
+                <br>
+                YOU MATTER!
+
+            </p>
+
+            <p>Fill the form below and our team will reach out 
+                to you for whatever help you need.
+            </p>
+
+        </div>
+    <div class = "formcontainer">
+
+        <!--Source:https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+        <!--I have added a DOB, gender and email label and removed country label from the original code-->
+
+        <form action = "action_page.php">
+            
+             <h1>Contact us</h1>
+            
+
+            <label class = "form"><b>First Name</b></label>
+            <input type = "text" placeholder="Your first name" name = "firstname" id = "fname"
+            required>
+
+
+            <label class = "form"><b>Last Name</b></label>
+            <input type = "text" placeholder="Your last name" name = "lastname" id = "lname"
+            required>
+
+            <label class = "form"><b>Gender</b></label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+
+            <label class = "form"><b>Email</b></label>
+            <input type = "text" placeholder="Your email address" name = "email" id = "email"
+            required>
+
+
+            <label class = "form"><b>Date of Birth</b></label>
+            <input type = "date" placeholder="Your date of birth" name = "dob" id = "dob"
+            required>
+
+            <label for = "contact"><b>Contact No.</b></label>
+            <input type = "tel" placeholder="Your contact number" name = "contactno" id = "contactno"
+            required>
+
+            <label for = "subject"><b>Subject</b></label>
+            <textarea id="subject" name="subject" placeholder="Write something.." 
+            style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+            
+
+
+        </form>
+
+
+    </div>
+
+<!---------------FOOTER----------------->
+    <div class="footer">
+
+        <div class = "footercontent">
+
+        <div class = "col1">
+            <ul>
+                <li><a href ="">About Us</a></li>
+                <li><a href ="">Privacy Policy</a></li>
+                <li><a href ="">Terms and Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class = "col2">
+            <ul>
+                <li><a href ="">Donate</a></li>
+                <li><a href ="">Volunteer</a></li>
+                <li><a href ="">Work with us</a></li>
+            </ul>
+        </div>
+
+        <div class = "col3">
+            <ul>
+                <li><a href = "">Subscribe</a></li>
+                <li><a href = "">Contact Us</a></li>
+
+            </ul>
+        </div>
+
+        <div class = "socialmediaicons">
+                <ul>
+                    <li><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="assets/tiktok.png" alt="Tiktok"></a></li>
+                </ul>
+        </div>
+
+    </div>
+
+        <div class = "copyrights">
+            <p>Copyright &copy; 2023 peaceandmind.com All Rights Reserved.</p>
+        </div>
+
+        <div class = "disclaimer">
+            <p>Disclaimer:The content we provide is for information
+                purpose only and is not a substitute for any professional
+                medical advice. Therefore, we encourage you to seek the guidance of
+                qualified health professionals for further queries related to your
+                health or mental health conditions </p>
+        </div>
+            
+              
+        
+    </div> 
+
+
+
+<script src="mode.js"></script>
+
+ </body>
+</html>
